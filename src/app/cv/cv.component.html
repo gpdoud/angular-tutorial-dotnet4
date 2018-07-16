@@ -1,0 +1,18 @@
+<div>
+  <h5>Resume of {{ name }} {{ address }} {{ email }} {{ phone }}</h5>
+  <section>
+    <h6>Skills</h6>
+    <ul>
+      <li *ngFor="let skill of skills">{{ skill }}
+    </ul>
+  </section>
+  <section>
+    <h6>Experience</h6>
+    <div *ngFor="let e of experiences">
+      <span class="company">{{ e.company }}</span>
+      <span class="position"> {{ e.position }}</span><br>
+      <span class="dates"> {{ e.start }} - {{ e.end }}</span>
+      <p *ngFor="let p of e.description">{{ p }}</p>
+    </div>
+  </section>
+</div>
